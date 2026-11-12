@@ -96,8 +96,9 @@ resource "aws_glue_catalog_table" "entregas" {
 
 # Workgroup de Athena
 resource "aws_athena_workgroup" "entregas" {
-  name  = "wg_entregas"
-  state = "ENABLED"
+  name          = "wg_entregas"
+  state         = "ENABLED"
+  force_destroy = true
 
   configuration {
     enforce_workgroup_configuration = true
