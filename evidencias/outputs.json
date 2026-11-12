@@ -1,0 +1,22 @@
+{
+  "athena_workgroup": {
+    "sensitive": false,
+    "type": "string",
+    "value": "wg_entregas"
+  },
+  "bucket_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "de-final-entregas-234329974394-2026"
+  },
+  "glue_database": {
+    "sensitive": false,
+    "type": "string",
+    "value": "db_entregas"
+  },
+  "glue_table": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas"
+  }
+}

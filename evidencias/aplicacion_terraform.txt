@@ -1,0 +1,49 @@
+aws_glue_catalog_database.entregas: Creating...
+aws_s3_bucket.entregas: Creating...
+aws_s3_bucket.entregas: Still creating... [00m10s elapsed]
+aws_s3_bucket.entregas: Creation complete after 11s [id=de-final-entregas-234329974394-2026]
+aws_s3_bucket_public_access_block.privado: Creating...
+aws_athena_workgroup.entregas: Creating...
+aws_s3_bucket_public_access_block.privado: Creation complete after 0s [id=de-final-entregas-234329974394-2026]
+
+Error: creating Glue Catalog Database (db_entregas): operation error Glue: CreateDatabase, https response error StatusCode: 400, RequestID: 3ad7e39d-2510-4c57-9dc4-ab00ec831b5a, AccessDeniedException: User: arn:aws:iam::234329974394:user/user_cli is not authorized to perform: glue:CreateDatabase on resource: arn:aws:glue:us-east-1:234329974394:catalog because no identity-based policy allows the glue:CreateDatabase action
+
+  with aws_glue_catalog_database.entregas,
+  on principal.tf line 29, in resource "aws_glue_catalog_database" "entregas":
+  29: resource "aws_glue_catalog_database" "entregas" {
+
+
+Error: creating Athena WorkGroup (wg_entregas): operation error Athena: CreateWorkGroup, https response error StatusCode: 400, RequestID: f36b314a-a7ca-49af-b22f-449f77093332, api error AccessDeniedException: You are not authorized to perform: athena:CreateWorkGroup on the resource. After your AWS administrator or you have updated your permissions, please try again.
+
+  with aws_athena_workgroup.entregas,
+  on principal.tf line 98, in resource "aws_athena_workgroup" "entregas":
+  98: resource "aws_athena_workgroup" "entregas" {
+
+aws_glue_catalog_database.entregas: Creating...
+aws_athena_workgroup.entregas: Creating...
+aws_glue_catalog_database.entregas: Creation complete after 1s [id=234329974394:db_entregas]
+aws_glue_catalog_table.entregas: Creating...
+aws_glue_catalog_table.entregas: Creation complete after 1s [id=234329974394:db_entregas:entregas]
+
+Error: creating Athena WorkGroup (wg_entregas): operation error Athena: CreateWorkGroup, https response error StatusCode: 400, RequestID: 5fbd6adb-130d-4dd7-85c1-8f673950728e, api error AccessDeniedException: You are not authorized to perform: athena:CreateWorkGroup on the resource. After your AWS administrator or you have updated your permissions, please try again.
+
+  with aws_athena_workgroup.entregas,
+  on principal.tf line 98, in resource "aws_athena_workgroup" "entregas":
+  98: resource "aws_athena_workgroup" "entregas" {
+
+
+Error: Saved plan is stale
+
+The given plan file can no longer be applied because the state was changed by
+another operation after the plan was created.
+aws_athena_workgroup.entregas: Creating...
+aws_athena_workgroup.entregas: Creation complete after 1s [id=wg_entregas]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+athena_workgroup = "wg_entregas"
+bucket_name = "de-final-entregas-234329974394-2026"
+glue_database = "db_entregas"
+glue_table = "entregas"
