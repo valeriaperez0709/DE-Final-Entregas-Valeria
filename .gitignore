@@ -25,3 +25,5 @@ terraform.tfvars
 
 # Sistema operativo
 .DS_Store
+**/tfplan
+**/tfplan
